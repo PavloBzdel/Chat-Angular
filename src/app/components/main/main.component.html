@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="content">
+    <div class="content-create">
+      <div class="title">Chats</div>
+      <!-- <form (ngSubmit)="submit()" [formGroup]="form">
+        <input type="text" formControlName="fullName" placeholder="Input full name your friends">
+        <button type="submit" class="btn btn-primary btn-block button" [disabled]="form.invalid">Add</button>
+      </form> -->
+    </div>
+
+    <div class="post-container">
+      <div class="post">
+        <div> <a routerLink="/content">
+            <div class="people">
+              <div class="post-img">
+                <mat-icon>account_circle</mat-icon>
+              </div>
+              <div class="post-title__container">
+                <div class="post-title">Marta</div>
+                <div class="post-subtitle">{{msg}}</div>
+              </div>
+              <div class="post-date">{{dataService.data | async | moment: 'DD.MM.YYYY'}}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="post">
+        <div> <a routerLink="/content-second">
+            <div class="people">
+              <div class="post-img">
+                <mat-icon>account_circle</mat-icon>
+              </div>
+              <div class="post-title__container">
+                <div class="post-title">Mother</div>
+                <div class="post-subtitle">{{msg}}</div>
+              </div>
+              <div class="post-date">{{dataService.data | async | moment: 'DD.MM.YYYY'}}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="post">
+        <div><a routerLink="/content-third">
+            <div class="people">
+              <div class="post-img">
+                <mat-icon>account_circle</mat-icon>
+              </div>
+              <div class="post-title__container">
+                <div class="post-title">Daddy</div>
+                <div class="post-subtitle">{{msg}}</div>
+              </div>
+              <div class="post-date">{{dataService.data | async | moment: 'DD.MM.YYYY'}}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="post">
+        <div><a routerLink="/content-third">
+            <div class="people">
+              <div class="post-img">
+                <mat-icon>account_circle</mat-icon>
+              </div>
+              <div class="post-title__container">
+                <div class="post-title">Daddy</div>
+                <div class="post-subtitle">{{msg}}</div>
+              </div>
+              <div class="post-date">{{dataService.data | async | moment: 'DD.MM.YYYY'}}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

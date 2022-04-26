@@ -1,0 +1,36 @@
+<section class="section">
+  <header>
+    <div class="container">
+      <div class="title">
+        <mat-icon>account_circle</mat-icon>
+      </div>
+      <div class="text">Daddy</div>
+    </div>
+  </header>
+  <main class="content">
+    <div class="joke" *ngFor="let joke of jokes">
+      <div class="joke-message">{{joke.value}}</div>
+      <div class="joke-date">{{dataService.data | async | moment: 'MM-DD-YYYY, h:mm:ss a'}}</div>
+    </div>
+    <div class="box" *ngFor="let message of messages; let i = index">
+      <div>
+        <div class="messages">{{message.title}}</div>
+        <div class="date">{{dataService.data | async | moment: 'MM-DD-YYYY, h:mm:ss a'}}</div>
+      </div>
+      <div><button class="btn-remove" (click)="remove(message)">
+          <mat-icon>delete_forever</mat-icon>
+        </button></div>
+    </div>
+  </main>
+  <footer>
+    <form (ngSubmit)="submit()" [formGroup]="form">
+      <div class="footer-container">
+        <div><input type="text" formControlName="title" placeholder="Type your message"></div>
+        <div><button type="submit" class="btn" [disabled]="form.invalid" (click)="getJoke()">
+            <mat-icon>send</mat-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+  </footer>
+</section>
